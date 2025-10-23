@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Treasure Hunt Birthday Game</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Levels</h2>
+      <div id="levels"></div>
+      <small class="small" style="opacity:.8;margin-top:auto">
+        Progress is saved locally in your browser.
+      </small>
+    </aside>
+
+    <main class="main">
+      <div id="view-home" class="card welcome">
+        <h1><strong>Hello Aditya, every level in this game reveals your birthday surprises!</strong></h1>
+        <p class="small">Complete each level to unlock the next.</p>
+        <div style="height:18px"></div>
+        <button id="start-btn" class="btn">Start the Game</button>
+      </div>
+
+      <!-- Level Pages container -->
+      <div id="level-container" class="card hidden"></div>
+
+      <footer>Made with ❤️ — Treasure Hunt Game</footer>
+    </main>
+  </div>
+
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>

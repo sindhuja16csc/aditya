@@ -1,0 +1,182 @@
+:root {
+  --accent: #ff6b6b;
+  --muted: #f3f3f5;
+}
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #fff, #f7fbff);
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #0f1724;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sidebar h2 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+.level {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.level.locked {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.level .num {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px;
+  border-radius: 6px;
+  width: 30px;
+  text-align: center;
+}
+.main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(15, 23, 36, 0.06);
+}
+/* Home */
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+.welcome h1 {
+  font-size: 22px;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+}
+.welcome p {
+  font-weight: 700;
+}
+
+    .btn{
+      background:var(--accent);
+      color:#fff;border:none;
+      padding:12px 18px;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer}
+.btn:hover {
+            background-color: #2563eb;
+        }
+/* Level content */
+.level-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.audio-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.audio-card img {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.audio-card button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0ea5a4;
+  color: white;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type=text] {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+.success {
+  background: linear-gradient(90deg, #e6fffa, #ecfccb);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #c7f9e4;
+}
+.puzzle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 360px; /* Fixed size for 3x3 grid */
+            height: 360px;
+            border: 4px solid #1f2937;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+ .tile {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Crucial: Clips the 300% image */
+            cursor: pointer;
+            transition: outline 0.1s ease;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+   .tile img {
+            width: 300%;   /* Image spans across 3 columns */
+            height: 300%;  /* Image spans across 3 rows */
+            object-fit: cover;
+            /* object-position is set dynamically to select the correct 1/9th slice */
+        }
+
+.small {
+  font-size: 13px;
+}
+footer {
+  font-size: 13px;
+  color: #666;
+  margin-top: auto;
+  text-align: center;
+}
+@media (max-width:800px) {
+  .sidebar { display:none; }
+  .container { flex-direction: column; }
+  .main { padding: 18px; }
+}
+
